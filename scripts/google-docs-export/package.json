@@ -1,0 +1,13 @@
+{
+  "name": "google-docs-export",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exports all Google Docs from a user's Drive as Markdown into the Second-Brain vault's raw/google-doc/ folder.",
+  "scripts": {
+    "export": "node export.mjs"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
+}
