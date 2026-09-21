@@ -1,35 +1,52 @@
-# Second Brain Vault
+# My AI Second Brain 🧠
 
-A structure and set of Claude Code skills for turning raw exported notes (Claude conversations, Google Docs, Notion pages, Slack threads, freeform notes) into a cross-linked, synthesized personal wiki.
+This is my personal knowledge base. It uses **Obsidian** to read and view notes, and **Claude Code** as an AI helper to organize everything automatically.
 
-This is the **skeleton** — folder structure, conventions, and the Claude Code commands that operate on it. It ships with no personal notes; you fill it with your own.
+## How It Works
 
-## How it works
+This project is split into two main folders. It is very important to keep them separate:
 
-- Drop source material into `raw/` (see each subfolder's README for where to export from).
-- Run `/ingest` to have Claude read new sources and write/update pages in `wiki/`.
-- Run `/query <question>` to get an answer synthesized strictly from the wiki, with citations.
-- Run `/lint` to health-check the wiki for broken links, orphan pages, missing frontmatter, and stale pages.
-- Run `/log <note>` to append a quick timestamped note to `wiki/log.md`.
+*   📂 **`raw/` (My Messy Notes):** This is where I dump my raw data. Exports from ChatGPT, meeting notes, articles, and random thoughts go here. The AI is **never** allowed to edit files in this folder.
+    * **AI chat:** `claude-exports`, `chatgpt-exports`, `perplexity`, `raycast-ai`, `cursor-chats`, `copilot-chats`
+    * **AI notes & meetings:** `granola-exports`, `mem`, `reflect`, `fathom`, `otter`, `fireflies`, `loom`
+    * **Docs & wikis:** `notion-exports`, `google-docs`, `apple-notes`, `evernote`, `bear`, `roam`
+    * **Reading:** `readwise`, `kindle-highlights`, `apple-books`, `pocket`, `instapaper`, `matter`
+    * **Media:** `podcast-transcripts`, `youtube-transcripts`, `voice-memos`, `substack`
+    * **Work:** `slack-exports`, `linear`, `jira`, `email-archives`
+    * **Research:** `pdfs`, `arxiv-papers`, `zotero`
+    * **Plus:** `articles` (web clippings) and `notes` (personal notes) ect ect 
 
-Full conventions (frontmatter, page types, style guide) are in [`CLAUDE.md`](./CLAUDE.md) — read and adapt Section 4 ("Domain Context") to your own life/work before you start.
+*   📂 **`wiki/` (The AI's Brain):** This is where Claude organizes my messy notes. It reads the `raw/` folder, figures out what is important, and creates clean, linked pages in this folder. I read these pages in Obsidian.
 
-## Structure
+## The 4 Main Commands
+I use Claude Code in my terminal to run this brain. Here are the four commands I use:
 
-```
-raw/        your source documents — never edited by Claude
-wiki/       Claude's synthesized, living pages — index.md, log.md, concepts/, projects/, people/
-journal/    daily notes (not yet set up)
-content/    drafts/write-ups produced from the wiki (not yet set up)
-.claude/commands/   the ingest/query/lint/log skills
-scripts/google-docs-export/   optional helper to pull Google Docs into raw/google-doc/
-```
+1.  `/ingest` - Tells Claude to read new files in `raw/` and organize them into the `wiki/`.
+2.  `/query` - Asks Claude a question based on everything inside the `wiki/`.
+3.  `/lint` - Asks Claude to check the `wiki/` for broken links or messy pages.
+4.  `/log` - Quickly saves a single thought or idea into my log book.
 
-## Setup
+ 
+ ┌────────────────────────┐      ┌────────────────────────┐      ┌────────────────────────┐
+ │  1. YOUR MESSY NOTES   │      │   2. CLAUDE ORGANISES  │      │   3. YOUR SECOND BRAIN │
+ │  ────────────────────  │      │   ───────────────────  │      │   ───────────────────  │
+ │                        │      │                        │      │                        │
+ │   raw/                 │      │   Reads raw/, follows  │      │   wiki/                │
+ │   • claude-chat.md     │ ───► │   rules in CLAUDE.md,  │ ───► │   • index.md           │
+ │   • chatgpt-chat.md    │      │   writes wiki/         │      │   • concepts/          │
+ │   • meeting-notes.md   │      │                        │      │   • people/            │
+ │   • notion-export.md   │      │   Commands you run:    │      │   • projects/          │
+ │                        │      │     /ingest  /query    │      │                        │
+ │   YOU drop notes here. │      │     /lint    /log      │      │   YOU read here, in    │
+ │                        │      │                        │      │   Obsidian.            │
+ └────────────────────────┘      └────────────────────────┘      └────────────────────────┘
 
-1. Clone this repo, open it in an editor with Claude Code.
-2. Fill in `CLAUDE.md` §4 with your own context.
-3. Drop files into the matching `raw/` subfolder.
-4. Run `/ingest`.
+       scattered across               turns mess into               ask questions, spot
+       5 different apps               linked knowledge              patterns, never lose
+                                                                    an idea again
+For example, this is a short portion of my second brain
+<img width="1188" height="777" alt="image" src="https://github.com/user-attachments/assets/9faf499a-9577-48ac-a022-5fcf7b53d8b1" />
 
-(Optional) To pull Google Docs automatically instead of exporting by hand, see `scripts/google-docs-export/README.md` for one-time OAuth setup.
+
+
+                                                                    
