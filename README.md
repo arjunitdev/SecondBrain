@@ -1,4 +1,4 @@
-# My AI Second Brain 🧠
+# Second Brain 
 
 This is my personal knowledge base. It uses **Obsidian** to read and view notes, and **Claude Code** as an AI helper to organize everything automatically.
 
@@ -26,7 +26,12 @@ I use Claude Code in my terminal to run this brain. Here are the four commands I
 3.  `/lint` - Asks Claude to check the `wiki/` for broken links or messy pages.
 4.  `/log` - Quickly saves a single thought or idea into my log book.
 
- 
+ For example, this is a short portion of my second brain ( not gonna show the full portion *_* )
+<img width="1188" height="777" alt="image" src="https://github.com/user-attachments/assets/9faf499a-9577-48ac-a022-5fcf7b53d8b1" />
+
+
+ ## all in one solution 
+```text
  ┌────────────────────────┐      ┌────────────────────────┐      ┌────────────────────────┐
  │  1. YOUR MESSY NOTES   │      │   2. CLAUDE ORGANISES  │      │   3. YOUR SECOND BRAIN │
  │  ────────────────────  │      │   ───────────────────  │      │   ───────────────────  │
@@ -44,9 +49,22 @@ I use Claude Code in my terminal to run this brain. Here are the four commands I
        scattered across               turns mess into               ask questions, spot
        5 different apps               linked knowledge              patterns, never lose
                                                                     an idea again
-For example, this is a short portion of my second brain
-<img width="1188" height="777" alt="image" src="https://github.com/user-attachments/assets/9faf499a-9577-48ac-a022-5fcf7b53d8b1" />
+```
+## Future Additions
 
+* **Automatic Note Pulling:** Right now, getting notes into the `raw/` folder and running `/ingest` is manual. I plan to add connectors for Google Drive, Notion, Slack, and Gmail so new documents and important emails automatically drop into my brain.
+
+* **Work Schedule Tracker:** A feature that can read a PDF schedule (like a catering shift schedule), automatically put the shifts into my Google Calendar with 60/90-minute reminders, and log them in my wiki so I can track my work history.
+
+* **Smarter AI Search:** Upgrading the `/query` command to use "semantic search" (AI embeddings). This means Claude will understand the meaning of my question and find the right notes, even if I don't type the exact matching words.
+
+* **Automatic Cleanup Tools:** Adding commands to automatically find and delete duplicate files in the `raw/` folder, and a scanner that proactively warns me if two notes contradict each other (like conflicting resume histories).
+
+* **Daily Journal & Content Creation:** Setting up a daily journaling system in the `journal/` folder, plus a workflow that helps turn my organized wiki pages into rough drafts for articles or posts.
+
+* **Phone Access:** Setting up a secure way (like Tailscale or a private web server) so I can ask Claude questions about my second brain from my phone while I am away from my computer.
+
+* **GitHub Setup:** Adding a standard open-source license (like an MIT license) to the public repository, and setting up automatic format checkers (CI) to make sure all notes have the correct layout.
 
 
                                                                     
