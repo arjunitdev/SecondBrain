@@ -38,10 +38,10 @@ I use Claude Code in my terminal to run this brain. Here are the four commands I
  │                        │      │                        │      │                        │
  │   raw/                 │      │   Reads raw/, follows  │      │   wiki/                │
  │   • claude-chat.md     │ ───► │   rules in CLAUDE.md,  │ ───► │   • index.md           │
- │   • chatgpt-chat.md    │      │   writes wiki/         │      │   • concepts/          │
+ │   • google docs.md     │      │   writes wiki/         │      │   • concepts/          │
  │   • meeting-notes.md   │      │                        │      │   • people/            │
  │   • notion-export.md   │      │   Commands you run:    │      │   • projects/          │
- │                        │      │     /ingest  /query    │      │                        │
+ │   • slack.md           │      │     /ingest  /query    │      │                        │
  │   YOU drop notes here. │      │     /lint    /log      │      │   YOU read here, in    │
  │                        │      │                        │      │   Obsidian.            │
  └────────────────────────┘      └────────────────────────┘      └────────────────────────┘
